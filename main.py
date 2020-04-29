@@ -38,13 +38,13 @@ def formatted_output_data_country():
     formatted_country = bs4.BeautifulSoup(data_country.text, 'html.parser')
     info=formatted_country.find_all(id="maincounter-wrap")
     print(searchdata.capitalize()+"'s COVID 19 DATA :")
-    formdat=""
+    formdata=""
     for id in info:
         all_text=id.find("h1").get_text()
         all_data=id.find("span").get_text()
         data=all_text+" "+all_data+"\n"
-        formdat=formdat+data
-    print(formdat)
+        formdata=formdat+data
+    print(formdata)
     
 formatted_output_data_country()
 print("\n")
